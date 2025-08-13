@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Company Links</title>
+  <meta name="description" content="Quick access to our social links, website, location, and company profile." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111827cc;
+      --text: #e5e7eb;
+      --accent: #22d3ee;
+      --muted: #9ca3af;
+      --ring: #67e8f9;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; padding: 24px;
+      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(1200px 600px at 20% -10%, #0ea5e9 0%, transparent 60%),
+        radial-gradient(1200px 600px at 120% 10%, #22d3ee 0%, transparent 55%),
+        linear-gradient(180deg, #0b1022 0%, #0f172a 100%);
+      min-height: 100vh;
+      display: grid; place-items: center;
+    }
+    .wrap {
+      width: 100%;
+      max-width: 760px;
+    }
+    .card {
+      background: var(--card);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow:
+        0 10px 30px rgba(0,0,0,.25),
+        inset 0 1px 0 rgba(255,255,255,.04);
+    }
+    .brand {
+      display: flex; align-items: center; gap: 16px; margin-bottom: 16px;
+    }
+    .logo {
+      width: 56px; height: 56px; border-radius: 14px;
+      display: grid; place-items: center;
+      background: linear-gradient(135deg, #0891b2, #38bdf8);
+      box-shadow: 0 6px 16px rgba(34,211,238,.3);
+      font-size: 28px;
+    }
+    h1 { margin: 0; font-size: 28px; font-weight: 800; letter-spacing: .2px; }
+    .tag { color: var(--muted); margin: 6px 0 0; font-size: 14px; }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin-top: 18px;
+    }
+    @media (min-width: 560px) {
+      .grid { grid-template-columns: 1fr 1fr; }
+    }
+    .btn {
+      display: flex; align-items: center; gap: 12px;
+      padding: 16px 18px;
+      background: #0b1222;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 14px;
+      color: var(--text); text-decoration: none; font-weight: 600;
+      position: relative; overflow: hidden;
+      transition: transform .12s ease, border-color .2s ease;
+    }
+    .btn:hover { transform: translateY(-2px); border-color: rgba(103,232,249,.45); }
+    .btn:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(103,232,249,.35);
+    }
+    .btn i { font-size: 18px; width: 22px; text-align: center; }
+    .hint {
+      margin-top: 14px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .footer {
+      margin-top: 24px;
+      display: flex; justify-content: space-between; align-items: center;
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .qr {
+      display: inline-flex; gap: 8px; align-items: center;
+      border: 1px dashed rgba(255,255,255,0.14);
+      padding: 6px 10px; border-radius: 12px;
+    }
+    .qr b { color: var(--text); }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="card">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"><i class="fa-solid fa-link"></i></div>
+        <div>
+          <h1><!-- TODO: Company Name -->MORE International Engineering Consulting</h1>
+          <p class="tag">All your links in one place</p>
+        </div>
+      </div>
+
+      <div class="grid">
+        <!-- Replace the href values with your real links -->
+        <a class="btn" href="https://www.facebook.com/share/17CMmzSoQy/" target="_blank" rel="noopener">
+          <i class="fa-brands fa-facebook"></i> Facebook Page
+        </a>
+
+        <a class="btn" href="https://www.instagram.com/moreintluae?igsh=MWhyZjlqMGJ3bHl3dg==" target="_blank" rel="noopener">
+          <i class="fa-brands fa-instagram"></i> Instagram
+        </a>
+
+        <a class="btn" href="https://www.linkedin.com/company/moreint/" target="_blank" rel="noopener">
+          <i class="fa-brands fa-linkedin"></i> LinkedIn
+        </a>
+
+        <a class="btn" href="https://more-intl.ae/" target="_blank" rel="noopener">
+          <i class="fa-solid fa-globe"></i> Website
+        </a>
+
+        <a class="btn" href="https://maps.app.goo.gl/uEBjN4LwXGHWLHuV9" target="_blank" rel="noopener">
+          <i class="fa-solid fa-location-dot"></i> Location (Google Maps)
+        </a>
+
+        <a class="btn" href="assets/company-profile.pdf" target="_blank" rel="noopener">
+          <i class="fa-solid fa-file-pdf"></i> Company Profile (PDF)
+        </a>
+      </div>
+
+      <p class="hint">
+        Pro tip: On phones, these links usually open the app automatically if installed. Otherwise, they open in the browser.
+      </p>
+
+      <div class="footer">
+        <span>&copy; <span id="y"></span> <!-- TODO: Company Name -->MORE International Engineering Consulting</span>
+        <span class="qr">QR target: <b><!-- TODO: Final URL after hosting -->https://yourname.github.io/company-links</b></span>
+      </div>
+    </section>
+  </main>
+  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+</body>
+</html>
